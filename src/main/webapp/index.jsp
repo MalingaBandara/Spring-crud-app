@@ -1,3 +1,3 @@
 
 
-<% response.sendRedirect("customer/all"); %>
+<% response.sendRedirect("customers/all"); %>

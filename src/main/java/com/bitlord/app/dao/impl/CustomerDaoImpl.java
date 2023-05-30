@@ -24,4 +24,12 @@ public class CustomerDaoImpl implements CustomerDao {
         return sessionFactory.getCurrentSession().createQuery( "FROM Customer", Customer.class ).getResultList();
 
     }
+
+
+    @Override
+    public void saveCustomer(Customer customer) {
+
+        sessionFactory.getCurrentSession().save( customer );
+
+    }
 }
