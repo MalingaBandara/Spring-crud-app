@@ -31,4 +31,13 @@ public class CustomerController {
     }
 
 
+    @GetMapping( "/new-customer-form" )/*GET,POST,PUT,DELETE*/
+    public String newCustomerFormLoader(){
+
+        List<Customer> list = customerService.findAllCustomers();
+
+        return "new-customer-form";
+    }
+
+
 }

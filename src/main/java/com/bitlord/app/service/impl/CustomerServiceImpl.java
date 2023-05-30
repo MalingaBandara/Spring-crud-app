@@ -5,6 +5,7 @@ import com.bitlord.app.entity.Customer;
 import com.bitlord.app.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 
     @Override
+    @Transactional
     public List<Customer> findAllCustomers() {
 
         return customerDao.findAllCustomers();
