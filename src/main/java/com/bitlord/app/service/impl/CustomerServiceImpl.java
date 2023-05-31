@@ -35,4 +35,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     }
 
+    @Override
+    @Transactional
+    public Customer findCustomer(long id) {
+        return customerDao.findCustomer(id);
+    }
+
 }

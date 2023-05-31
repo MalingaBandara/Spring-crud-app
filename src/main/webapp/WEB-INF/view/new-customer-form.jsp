@@ -11,6 +11,8 @@
 
         <form:form action="new-customer" modelAttribute="customer" method="post">
 
+            <form:hidden path="id"/>
+
             <div class="form-group">
                 <label for="name"> Customer Name </label>
                 <form:input path="name" id="name" />
@@ -22,7 +24,7 @@
             </div>
 
             <div>
-                <button type="submit" class="btn btn-primary"> Save Customer</button>
+                <button type="submit" class="btn btn-primary"> (Save / update) Customer </button>
             </div>
 
         </form:form>

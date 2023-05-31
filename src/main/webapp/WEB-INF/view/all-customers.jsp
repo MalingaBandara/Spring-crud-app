@@ -30,11 +30,19 @@
         </thead>
         <tbody>
         <c:forEach var="cus" items="${customers}">
-            <tr>
-                <td>${cus.id}</td>
-                <td>${cus.name}</td>
-                <td>${cus.salary}</td>
-            </tr>
+
+            <c:url var="update" value="/customers/update-ui-form" >
+                <c:param name="id" value="${cus.id}" />
+            </c:url>
+
+                <tr>
+                    <td>${cus.id}</td>
+                    <td>${cus.name}</td>
+                    <td>${cus.salary}</td>
+
+                   <td>  <a href="${update}" >Update Customer</a> </td>
+
+                </tr>
         </c:forEach>
         </tbody>
     </table>
