@@ -16,6 +16,7 @@
             <div class="form-group">
                 <label for="name"> Customer Name </label>
                 <form:input path="name" id="name" />
+
             </div>
 
             <div class="form-group">
